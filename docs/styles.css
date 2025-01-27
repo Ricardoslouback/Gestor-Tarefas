@@ -1,0 +1,181 @@
+/* Geral */
+/* Define o estilo padrão para todos os elementos */
+* {
+  padding: 0; /* Remove o espaçamento interno padrão */
+  margin: 0; /* Remove a margem padrão */
+  box-sizing: border-box; /* Inclui bordas e padding no tamanho total do elemento */
+  font-family: Verdana; /* Define a fonte padrão como Verdana */
+  color: #333; /* Define a cor do texto como cinza escuro */
+}
+
+/* Estilização do corpo da página */
+body {
+  background-image: url("../img/agenda.png"); /* Define uma imagem de fundo */
+  background-position: center; /* Centraliza a imagem de fundo */
+  background-size: cover; /* Faz com que a imagem cubra toda a tela */
+}
+
+/* Estilização geral para botões */
+button {
+  background-color: s#fdfdfd; /* Cor de fundo branca */
+  color: #3f8b28; /* Cor do texto verde */
+  border: 2px solid #12aa77; /* Borda verde */
+  padding: 0.3rem 0.6rem; /* Espaçamento interno do botão */
+  font-size: 1rem; /* Tamanho da fonte */
+  cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
+  display: flex; /* Usa flexbox para alinhar os itens */
+  justify-content: center; /* Centraliza horizontalmente o conteúdo do botão */
+  align-items: center; /* Centraliza verticalmente o conteúdo do botão */
+  transition: 0.4s; /* Transição suave ao passar o mouse */
+}
+
+/* Estilização ao passar o mouse sobre o botão */
+button:hover {
+  background-color: #102f5e; /* Muda a cor de fundo para azul escuro */
+}
+
+/* Estilização do ícone dentro do botão ao passar o mouse */
+button:hover > i {
+  color: #189a71; /* Altera a cor do ícone para verde */
+}
+
+/* Estilização dos ícones nos botões */
+button i {
+  pointer-events: none; /* Impede que o ícone receba eventos de clique */
+  color: #102f5e; /* Cor azul escura padrão */
+  font-weight: bold; /* Define o texto do ícone como negrito */
+}
+
+/* Estilização para campos de entrada e seletores */
+input,
+select {
+  padding: 0.25rem 0.5rem; /* Espaçamento interno */
+}
+
+/* Oculta elementos com a classe "hide" */
+.hide {
+  display: none;
+}
+
+/* Estilização do cabeçalho da lista de tarefas */
+.todo-container {
+  max-width: 450px; /* Define uma largura máxima */
+  margin: 3rem auto 0; /* Centraliza horizontalmente e adiciona espaçamento superior */
+  background-color: #95b491; /* Cor de fundo verde claro */
+  padding: 1.5rem; /* Espaçamento interno */
+  border-radius: 15px; /* Borda arredondada */
+}
+
+.todo-container header {
+  text-align: center; /* Centraliza o texto */
+  padding: 0 1rem 1rem; /* Espaçamento interno */
+  border-bottom: 1px solid #ccc; /* Linha inferior cinza */
+}
+
+/* Estilização dos formulários de adicionar e editar tarefas */
+#todo-form,
+#edit-form {
+  padding: 3rem; /* Espaçamento interno */
+  border-bottom: 1px solid #bd2020; /* Linha inferior vermelha */
+}
+
+/* Estilização de parágrafos dentro dos formulários */
+#todo-form p,
+#edit-form p {
+  margin-bottom: 0.5rem; /* Espaçamento inferior */
+  font-weight: bold; /* Texto em negrito */
+}
+
+/* Configuração de flexbox para os controles do formulário */
+.form-control {
+  display: flex; /* Define um layout flexível */
+}
+
+/* Margem lateral direita para os campos de entrada */
+.form-control input {
+  margin-right: 0.3rem;
+}
+
+/* Botão para cancelar a edição */
+#cancel-edit-btn {
+  margin-top: 1rem; /* Espaçamento superior */
+  color: #444; /* Cor cinza médio */
+}
+
+/* Barra de ferramentas para busca e filtro */
+#toolbar {
+  padding: 1rem; /* Espaçamento interno */
+  border-bottom: 1px solid #ccc; /* Linha inferior cinza */
+  display: flex; /* Layout flexível */
+}
+
+/* Estilo do título da barra de ferramentas */
+#toolbar h4 {
+  margin-bottom: 0.5rem; /* Espaçamento inferior */
+}
+
+/* Seção de busca */
+#search {
+  border-right: 1px solid #ddd; /* Linha direita cinza claro */
+  padding-right: 1rem; /* Espaçamento interno à direita */
+  margin-right: 1rem; /* Margem direita */
+  width: 65%; /* Ocupa 65% da largura */
+  display: flex; /* Layout flexível */
+  flex-direction: column; /* Disposição em coluna */
+}
+
+/* Formulário dentro da busca */
+#search form {
+  display: flex; /* Layout flexível */
+}
+
+/* Campo de entrada da busca */
+#search input {
+  width: 100%; /* Largura total */
+  margin-right: 0.3rem; /* Margem direita */
+}
+
+/* Seção de filtro */
+#filter {
+  width: 35%; /* Ocupa 35% da largura */
+  display: flex; /* Layout flexível */
+  flex-direction: column; /* Disposição em coluna */
+}
+
+/* Estilização do seletor de filtro */
+#filter select {
+  flex: 1; /* Expande para ocupar o espaço disponível */
+}
+
+/* Lista de tarefas */
+.todo {
+  display: flex; /* Layout flexível */
+  justify-content: space-around; /* Espaçamento uniforme entre os itens */
+  align-items: center; /* Alinhamento vertical centralizado */
+  padding: 1rem 1rem; /* Espaçamento interno */
+  border-bottom: 1px solid #ddd; /* Linha inferior cinza claro */
+  transition: 0.3s; /* Transição suave */
+}
+
+/* Título da tarefa */
+.todo h3 {
+  flex: 1; /* Ocupa o espaço disponível */
+  font-size: 0.9rem; /* Tamanho da fonte */
+}
+
+/* Botões dentro da tarefa */
+.todo button {
+  margin-left: 0.4rem; /* Margem esquerda */
+}
+
+/* Estilização para tarefas concluídas */
+.done {
+  background: #395169; /* Fundo azul escuro */
+}
+
+/* Estilo do título de tarefas concluídas */
+.done h3 {
+  color: #fff; /* Texto branco */
+  text-decoration: line-through; /* Texto riscado */
+  font-style: italic; /* Texto em itálico */
+}

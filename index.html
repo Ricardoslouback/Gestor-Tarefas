@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- Define o tipo de documento como HTML5 -->
+<html lang="en">
+  <!-- Define o idioma principal da página como inglês -->
+  <head>
+    <!-- Configura o conjunto de caracteres como UTF-8 para suportar caracteres especiais -->
+    <meta charset="UTF-8" />
+    <!-- Garante compatibilidade com versões mais antigas do Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Permite que a página seja responsiva, ajustando-se ao tamanho da tela -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Define o título da página exibido na aba do navegador -->
+    <title>Gestão de Tarefas</title>
+    <!-- Importa o arquivo de estilos CSS local -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Importa a biblioteca de ícones Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Importa o arquivo de script JavaScript local, com defer para carregamento após o HTML -->
+    <script src="js/scripts.js" defer></script>
+  </head>
+  <body>
+    <!-- Container principal para a aplicação de tarefas -->
+    <div class="todo-container">
+      <header>
+        <!-- Título da aplicação -->
+        <h1>Gestor de Tarefas</h1>
+      </header>
+      <!-- Formulário para adicionar novas tarefas -->
+      <form id="todo-form">
+        <p>Adicione sua tarefa</p>
+        <div class="form-control">
+          <!-- Campo de texto para entrada de tarefas -->
+          <input
+            type="text"
+            id="todo-input"
+            placeholder="O que você vai fazer?"
+          />
+          <!-- Botão para adicionar tarefa -->
+          <button type="submit">
+            <i class="fa-thin fa-plus"></i>
+          </button>
+        </div>
+      </form>
+      <!-- Formulário para edição de tarefas, inicialmente oculto -->
+      <form id="edit-form" class="hide">
+        <p>Edite sua tarefa</p>
+        <div class="form-control">
+          <!-- Campo de texto para editar uma tarefa -->
+          <input type="text" id="edit-input" />
+          <!-- Botão para confirmar edição -->
+          <button type="submit">
+            <i class="fa-solid fa-check-double"></i>
+          </button>
+        </div>
+        <!-- Botão para cancelar a edição -->
+        <button id="cancel-edit-btn">Cancelar</button>
+      </form>
+      <!-- Barra de ferramentas para pesquisa e filtro -->
+      <div id="toolbar">
+        <div id="search">
+          <!-- Seção de pesquisa -->
+          <h4>Pesquisar:</h4>
+          <form>
+            <!-- Campo de texto para busca -->
+            <input type="text" id="search-input" placeholder="Buscar..." />
+            <!-- Botão para apagar texto da pesquisa -->
+            <button id="erase-button">
+              <i class="fa-solid fa-delete-left"></i>
+            </button>
+          </form>
+        </div>
+        <div id="filter">
+          <!-- Seção de filtro -->
+          <h4>Filtrar:</h4>
+          <!-- Menu suspenso para selecionar o tipo de filtro -->
+          <select id="filter-select">
+            <option value="all">Todas Tarefas</option>
+            <option value="done">Realizadas</option>
+            <option value="todo">A fazer</option>
+          </select>
+        </div>
+      </div>
+      <!-- Lista de tarefas -->
+      <div id="todo-list">
+        <div class="todo">
+          <!-- Nome da tarefa -->
+          <h3> estou aqui </h3>
+          <!-- Botões de ação para cada tarefa -->
+          <button class="finish-todo">
+            <i class="fa-solid fa-check"></i>
+          </button>
+          <button class="edit-todo">
+            <i class="fa-solid fa-pen"></i>
+          </button>
+          <button class="remove-todo">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
